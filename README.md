@@ -4,7 +4,8 @@
 
 # Queries
 
-`query getAllPost{
+Gets all Posts 
+```query getAllPost{
   posts{
     id,
     title,
@@ -14,9 +15,10 @@
       name
     }
   }
-}`
+}```
 
-`mutation createPost{
+Creates Post by giving **title**, **content** and **authorId**
+```mutation createPost{
   createPost(authorId: 1, 
   	title:"How to win at everything",
     content:"Work Hard Bro at the right time"
@@ -27,9 +29,10 @@
       content
     }
   }
-}`
+}```
 
-`mutation updatePost{
+Updates Post based on **id** of the post
+```mutation updatePost{
   updatePost(
     id:6,
   	content: "I know you know that working hard is the ultimate way"
@@ -40,15 +43,17 @@
       content
   	}
 	}
-}`
+}```
 
-`mutation deletePost{
+Deletes Post for given **id**
+```mutation deletePost{
   deletePost(id:1){
     success
   }
-}`
+}```
 
-`mutation createUser{
+Creates user based on **email**, **username** and **password**
+```mutation createUser{
   createUser(email:"rbt@gmail.com", username:"rbt", password:"mypassword"){
     user{
       id,
@@ -58,41 +63,45 @@
     token,
     refreshToken
   }
-}`
+}```
 
-`mutation tokenAuth{
+Gives Token for user as **username** and **password** of the user is provided
+```mutation tokenAuth{
   tokenAuth(username:"rbt", password:"shikhar111"){
     token,
     refreshToken,
     refreshExpiresIn,
     payload
   }
-}`
+}```
 
 ## Queries With Authorization
 
-* Authorization header required for whoami *
-`{
-    "Authorization": "Bearer <token>"
-}`
-
-`query whomai{
+Gives username based on **token** provided on Authorization header
+```query whomai{
   whoami{
     username
   }
-}`
+}```
+__Authorization header required for whoami__
+_Add this json on headers_
+```{
+    "Authorization": "Bearer <token>"
+}```
 
-* Authorization header required for allUsers *
-`{
-     "Authorization": "Bearer <token>"
-}`
-
-`query allUsers{
+Gives all users with their information 
+```query allUsers{
   users{
     id,
     username,
     email,
     password
   }
-}`
+}```
+__Authorization header required for allUsers__
+_Add this json on headers_
+```{
+     "Authorization": "Bearer <token>"
+}```
+
 

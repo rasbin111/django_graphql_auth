@@ -77,7 +77,7 @@ mutation createUser{
 ```
 
 ###### Gives Token for user as **username** and **password** of the user is provided
-```
+```graphql
 mutation tokenAuth{
   tokenAuth(username:"rbt", password:"shikhar111"){
     token,
@@ -106,7 +106,7 @@ _Authorization header required for whoami. Add this json on headers_
 ```
 
 ###### Gives all users with their information 
-```
+```graphql
 query allUsers{
   users{
     id,
@@ -117,7 +117,7 @@ query allUsers{
 }
 ```
 _Authorization header required for allUsers. Add this json on headers_
-```
+```graphql
 {
      "Authorization": "Bearer <token>"
 }

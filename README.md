@@ -1,5 +1,5 @@
 # Blog source: 
-1. [Empowering Your Django Backend with GraphQL: A Powerful Combination] (https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-764babd30bb0)
+1. [Empowering Your Django Backend with GraphQL: A Powerful Combination](https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-764babd30bb0)
 2. [Empowering Your Django Backend with GraphQL: A Powerful Combination (Part — 2)](https://medium.com/simform-engineering/empowering-your-django-backend-with-graphql-a-powerful-combination-part-2-2e9b0e5f17cd)
 
 # Queries
